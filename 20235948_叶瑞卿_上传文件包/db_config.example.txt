@@ -1,0 +1,5 @@
+host=localhost
+port=5432
+dbname=library_management_system
+user=postgres
+password=your_password_here
