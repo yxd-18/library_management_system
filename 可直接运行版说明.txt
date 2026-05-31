@@ -1,0 +1,26 @@
+图书管理系统可直接运行版说明
+
+1. 本压缩包包含内容
+- 控制台程序可执行文件：x64\Debug\library_management_system.exe
+- 运行所需动态库：x64\Debug 目录下的 DLL 文件
+- 完整项目源码：根目录源码文件与 qt_widgets 前端源码
+- 数据库脚本：library_management_system_postgresql.sql
+- 数据库与运行辅助脚本：scripts 目录
+
+2. 可以直接运行的部分
+- 当前可直接运行的是控制台版程序 library_management_system.exe
+- Qt 前端部分目前提供的是源码，不包含已编译好的前端 exe
+
+3. 运行前需要处理的事项
+- 先在 PostgreSQL 中执行 library_management_system_postgresql.sql
+- 将 db_config.example.txt 复制并重命名为 db_config.txt
+- 按本机数据库环境修改 db_config.txt 中的主机、端口、数据库名、用户名和密码
+
+4. 建议启动方式
+- 双击 运行控制台版.bat
+- 或直接运行 x64\Debug\library_management_system.exe
+- 如需先检查数据库连接，可运行 scripts\check_db.ps1
+
+5. 说明
+- 本压缩包不包含真实 db_config.txt，避免直接泄露开发机数据库密码
+- 如果需要在队友电脑上运行，必须由对方自行填写或你单独提供数据库连接配置

@@ -1,0 +1,24 @@
+图书管理系统 Qt 桌面版运行说明
+
+1. 主程序
+- 可执行文件：library_management_system_qt.exe
+- 推荐启动方式：双击 启动Qt桌面版.bat
+
+2. 本运行包已包含
+- Qt 运行库 DLL
+- Qt 平台插件 platforms\qwindows.dll
+- 数据库驱动 sqldrivers\qsqlpsql.dll
+- 图形与样式相关插件
+
+3. 首次运行前必须处理
+- 先在 PostgreSQL 中执行 library_management_system_postgresql.sql
+- 首次双击 启动Qt桌面版.bat 时，如果没有 db_config.txt，会自动根据 db_config.example.txt 生成一份
+- 打开 db_config.txt，按本机数据库环境修改 host、port、dbname、user、password
+
+4. 运行要求
+- 需要目标电脑可访问 PostgreSQL 数据库
+- 如果数据库不在本机，请把 db_config.txt 中的 host 改成实际数据库服务器地址
+
+5. 说明
+- 本运行包去掉了构建缓存、CMake 文件、PostgreSQL 工具程序和无关组件
+- 本运行包不包含真实数据库密码，避免泄露开发机配置

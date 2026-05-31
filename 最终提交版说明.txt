@@ -1,0 +1,28 @@
+图书管理系统最终提交版说明
+
+1. 本压缩包包含两部分
+- 源码：位于“完整程序代码”目录
+- Qt 可执行文件：位于“Qt桌面版可执行文件”目录
+
+2. 源码部分包含
+- 控制台后端源码
+- Qt 前端源码
+- Visual Studio 工程文件
+- 数据库脚本
+- 脚本与文档说明
+
+3. 可执行文件部分包含
+- library_management_system_qt.exe
+- Qt 运行库与平台插件
+- PostgreSQL 驱动所需 DLL
+- 启动脚本与数据库配置模板
+
+4. 首次运行前需要处理
+- 先执行 library_management_system_postgresql.sql 初始化数据库
+- 将 db_config.example.txt 复制并改名为 db_config.txt
+- 按目标电脑的 PostgreSQL 环境填写 host、port、dbname、user、password
+
+5. 说明
+- 为避免泄露开发机配置，压缩包不包含真实 db_config.txt
+- 如果只需要运行程序，直接使用“Qt桌面版可执行文件”目录即可
+- 如果需要继续开发或二次修改，请使用“完整程序代码”目录

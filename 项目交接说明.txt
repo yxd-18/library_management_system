@@ -1,0 +1,24 @@
+图书管理系统项目交接说明
+
+1. 项目组成
+- 控制台后端工程：根目录下的 .cpp、.h、.sln、.vcxproj 文件
+- Qt 前端工程：qt_widgets 目录
+- 数据库脚本：library_management_system_postgresql.sql
+- 数据库辅助脚本：scripts 目录
+- 文档与报告素材：doc_sections、研发文档修改完善稿.md
+
+2. 数据库使用方式
+- 先在 PostgreSQL 中执行 library_management_system_postgresql.sql
+- 本交接包默认不包含真实的 db_config.txt，避免直接暴露本机数据库密码
+- 请将 db_config.example.txt 复制一份并重命名为 db_config.txt，再按本机环境修改连接信息
+
+3. 运行与调试
+- Visual Studio 工程入口：library_management_system.sln
+- 控制台运行辅助：运行控制台版.bat 或 scripts/run_console.ps1
+- 数据库连通性检查：scripts/check_db.ps1
+- 完整测试数据导入：安全导入完整测试数据.bat 或 scripts/import_full_test_data.ps1
+
+4. 交接包处理原则
+- 已保留源码、前端、SQL、脚本、文档
+- 已去除 .git、.vs、build、x64、tmp_docx_extract、tmp_frontend_import 等缓存和编译产物
+- 如需直接运行现成 exe，需要单独从原开发机复制对应运行文件
